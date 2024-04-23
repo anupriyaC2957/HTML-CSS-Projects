@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+html{
+    font-size: 62.5%;
+
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    background-color: rgba(126, 99, 30, 0.808);
+}
+
+.wrapper {
+    width:80rem;
+    aspect-ratio: 1;
+    /*background-color: #ddd;*/
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%); 
+    /*This effectively centers the element both horizontally 
+    and vertically within its containing element. */
+   
+}
+
+.wrapper::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index:10;
+    border-radius: 50%;
+    box-shadow: -1rem -1rem 2rem #444, 1rem 1rem 2rem #444,
+    inset 10rem 0 5rem #000, inset -1rem 0 2rem #c9c3c3 ;  
+
+/* 
+-1rem -1rem 2rem #444: This creates a shadow with a horizontal offset 
+1rem 1rem 2rem #444: This is similar but creates a shadow bottom-right 
+inset 10rem 0 5rem #000: This creates an inset shadow (inside the element)
+inset -1rem 0 2rem #c9c3c3: Similar to the third one,
+This produces an inset shadow on the left side of the element.
+*/
+
+}
+
+.earth-day, .earth-night{
+    width:100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    animation: earthanim 25s -0.9s infinite linear ;
+}
+
+.earth-day{
+    background-image: url('day-trial.png');
+    background-position: center;
+    background-size: 50rem 150rem;
+    
+}
+
+.earth-night{
+    background-image: url('night-trial.png');
+    background-position: center;
+    background-size: 50rem 150rem;
+    clip-path: polygon(0 0 ,50% 0,50% 120%,0 120%);
+    
+}
+
+@keyframes earthanim {
+    0% {
+        background-position: 0 center;
+    }
+    100% {
+        background-position: 192rem center;
+        /*shifting the entire page halves by 192rem from the center*/
+    }
+    
+}
