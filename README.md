@@ -1,7 +1,7 @@
 # HTML-CSS-Projects
 Explored basic HTML and CSS Concepts and Projects 
 
- ## ----------PROJECT OUTPUTS-STATIC (to see dynamic animation run the code)----------
+ ## PROJECT OUTPUTS-STATIC (to see dynamic animation run the code)
 
 
 ## PROJECT 1: JUMPING SQUARE: Animated Square jumping on a string in an infinite loop
